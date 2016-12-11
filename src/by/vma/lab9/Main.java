@@ -217,7 +217,7 @@ public class Main {
             norm = ynext.normI();
             for(int i = 0; i < n; i++) {
                 lambdanext = ynext.vector[i] / ycur.vector[i];
-                if(!flag && (lambdanext - z.vector[i]) > epsilon){
+                if(!flag && Math.abs(lambdanext - z.vector[i]) > epsilon){
                     flag = true;
                 }
                 z.vector[i] = lambdanext;
